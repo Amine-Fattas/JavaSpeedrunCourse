@@ -4,13 +4,17 @@ class ExceptionHandling {
      public static void main(String[] args) {
 
          try {
-             System.out.println(  10/0 );
+             int denominator = 0;
+             System.out.println(  10/denominator );
+             if (denominator == 0)
+                 // Manually throw an exception
+                 throw new ArithmeticException("Cannot divide by )");
          }
          catch (ArithmeticException exception){ // Type definition Recommended
-             System.out.println(  exception.toString() );
+             System.out.println(  exception );
          }
          catch (Exception exception){ // Not recommended
-             System.out.println(  exception.toString() );
+             System.out.println(  exception.getMessage() );
          }
 
          finally {
