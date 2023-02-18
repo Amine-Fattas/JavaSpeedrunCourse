@@ -29,7 +29,7 @@ class Exercise1 {
 
     // B
     static void printPlayers() {
-        ArrayList<Integer> keyArray = new ArrayList<>(data.keySet());
+        ArrayList<Integer> keyArray = new ArrayList<>(Exercise1.data.keySet());
         Collections.sort(keyArray);
         for (int key: keyArray) {
             print("Room: " + key + ", Client: " + data.get(key));

@@ -32,9 +32,9 @@ class Exercise2 {
     ));
 
     public static void main(String[] args) {
-        ArrayList<Client> clientsStartingWithB = getPlayerStartingWith('B');
-        for (Client client: clientsStartingWithB) {
-            System.out.println(client.name);
+        ArrayList<Client> ClientsStartingWithB = getPlayerStartingWith('B');
+        for (Client Client: ClientsStartingWithB) {
+            System.out.println(Client.name);
         }
     }
 
@@ -46,22 +46,22 @@ class Exercise2 {
             }
         });
 
-        for (Client client: dataObjects) {
-            print("Room: " + client.roomNumber + ", Client: " + client.name);
+        for (Client Client: dataObjects) {
+            print("Room: " + Client.roomNumber + ", Client: " + Client.name);
         }
     }
 
     // C
     static Client getPlayerInRoom(int roomNumber) {
-        for (Client client: dataObjects) {
-            if (client.roomNumber == roomNumber) return client;
+        for (Client Client: dataObjects) {
+            if (Client.roomNumber == roomNumber) return Client;
         }
         return null;
     }
 
     static Client getPlayerNamed(String name) {
-        for (Client client: dataObjects) {
-            if (client.name == name) return client;
+        for (Client Client: dataObjects) {
+            if (Client.name == name) return Client;
         }
         return null;
     }
@@ -72,14 +72,14 @@ class Exercise2 {
     }
 
     // E
-    static void replaceRoomOfClient(String clientName, int newRoom) {
+    static void replaceRoomOfClient(String ClientName, int newRoom) {
         if (getPlayerInRoom(newRoom) != null) return;
-        getPlayerNamed(clientName).roomNumber = newRoom;
+        getPlayerNamed(ClientName).roomNumber = newRoom;
     }
 
     // F
     static ArrayList<Client> getPlayerStartingWith(char motif) {
-        dataObjects.removeIf( client -> client.name.charAt(0) != motif);
+        dataObjects.removeIf( Client -> Client.name.charAt(0) != motif);
         return dataObjects;
     }
 }
