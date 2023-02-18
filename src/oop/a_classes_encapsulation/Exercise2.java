@@ -1,7 +1,6 @@
-package oop.a_classes;
+package oop.a_classes_encapsulation;
 
 import java.util.*;
-import java.util.function.Predicate;
 
 class Client {
     int roomNumber;
@@ -18,18 +17,6 @@ class Exercise2 {
     static void print(String text) {
         System.out.println(text);
     }
-    static HashMap<Integer, String> dataa = new HashMap() {{
-        put(101, "Hakimi");
-        put(102, "Saiss");
-        put(104, "Ziyech");
-        put(202, "Ounahi");
-        put(205, "Nesyri");
-        put(211, "Bono");
-        put(303, "Yamiq");
-        put(304, "Boufal");
-        put(310, "Regragui");
-        put(404, "Amrabat");
-    }};
 
     static ArrayList<Client> dataObjects = new ArrayList<Client>(Arrays.asList(
             new Client(101, "Hakimi"),

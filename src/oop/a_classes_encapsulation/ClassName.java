@@ -1,4 +1,4 @@
-package oop.a_classes;
+package oop.a_classes_encapsulation;
 
 class ClassName {
 
